@@ -11,7 +11,7 @@ class LdapAdapterFactory implements FactoryInterface
 
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $service = $serviceLocator->get('UghAuthentication\Ldap\Ldap');
+        $service = $serviceLocator->get('UghAuthenticationLdap\Ldap\Ldap');
 
         $adapter = new Ldap();
         $adapter->setLdap($service);

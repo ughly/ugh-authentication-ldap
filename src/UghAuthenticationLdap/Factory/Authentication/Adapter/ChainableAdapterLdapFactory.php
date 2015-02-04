@@ -11,7 +11,7 @@ class ChainableAdapterLdapFactory implements FactoryInterface
 
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $ldapAdapter = $serviceLocator->get('UghAuthentication\Authentication\Adapter\LdapAdapter');
+        $ldapAdapter = $serviceLocator->get('UghAuthenticationLdap\Authentication\Adapter\LdapAdapter');
 
         $chainableAdapter = new ChainableAdapterLdap($ldapAdapter);
 
